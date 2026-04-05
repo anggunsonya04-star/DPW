@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Video</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Anggun Sonya Meylani">
+    <meta name="nim" content="253307038">
+    <style>
+        * { box-sizing: border-box; }
+        body { font-family: Arial, Helvetica, sans-serif; margin: 0; }
+        header { background-color: #666; padding: 30px; text-align: center; font-size: 35px; color: white; }
+        nav { float: left; width: 30%; min-height: 400px; background: #ccc; padding: 20px; }
+        nav ul { list-style-type: none; padding: 0; }
+        nav ul li { margin-bottom: 10px; }
+        nav ul li a { text-decoration: none; color: black; font-weight: bold; }
+        article { float: left; padding: 20px; width: 70%; background-color: #f1f1f1; min-height: 400px; }
+        section::after { content: ""; display: table; clear: both; }
+        footer { background-color: #777; padding: 10px; text-align: center; color: white; }
+        @media (max-width: 600px) { nav, article { width: 100%; height: auto; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h2>Judul Website</h2>
+    </header>
+
+    <section>
+        <nav>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gambar.html">Gambar</a></li>
+                <li><a href="event.html">Event</a></li>
+                <li><a href="audio.html">Audio</a></li>
+                <li><a href="video.html">Video</a></li>
+                <li><a href="svg.html">SVG</a></li>
+                <li><a href="canvas.html">Canvas</a></li>
+                <li><a href="pendaftaran.html">Pendaftaran</a></li>
+        </nav>
+
+        <article>
+            <h1>Pemutar Video</h1>
+
+            <!-- Video Lokal -->
+            <h3>Video Lokal</h3>
+            <video width="320" height="240" controls>
+                <source src="video/Raim Laode - Bersenja Gurau ( Official Lirik ) - Raim Laode (720p, h264).mp4" type="video/mp4">
+                Browser tidak mendukung.
+            </video><br><br>
+
+            <!-- Video dari YouTube menggunakan iframe -->
+            <h3>Video dari YouTube </h3>
+            <iframe width="320" height="240"
+                    src="https://www.youtube.com/embed/D89cIekJNH8?si=eOBWrpi27YLFopIv"></iframe>
+
+
+        
+
+            <p>
+                <strong>Kesimpulan Uji Coba Video (controls, autoplay, muted):</strong><br><br>
+                <b>Atribut controls</b> → menampilkan panel kontrol video bawaan browser
+                seperti tombol play/pause, pengatur volume, progress bar, dan tombol fullscreen.
+                Tanpa atribut ini, video tidak memiliki kontrol apapun dan pengguna tidak bisa
+                menjalankan video secara manual.<br><br>
+                <b>Atribut autoplay</b> → video langsung diputar otomatis saat halaman dibuka.
+                Sama seperti audio, di browser modern autoplay akan diblokir jika tidak
+                disertai atribut muted.<br><br>
+                <b>Atribut muted</b> → video diputar dalam kondisi bisu. Jika digabung dengan
+                autoplay, video akan langsung berjalan otomatis namun tanpa suara.
+                Pengguna tetap bisa mengaktifkan suara melalui panel kontrol.
+            </p>
+
+            <hr>
+
+            
+            <p>
+                <strong>Kesimpulan Uji Coba YouTube iframe:</strong><br><br>
+                Tag &lt;iframe&gt; digunakan untuk menyematkan halaman web lain ke dalam
+                halaman kita, termasuk video dari YouTube. Cara mendapatkan link embed YouTube
+                adalah dengan klik tombol "Share" lalu "Embed" pada video YouTube,
+                kemudian salin URL yang ada pada atribut src.<br><br>
+                Perbedaan &lt;video&gt; lokal dengan &lt;iframe&gt; YouTube:<br>
+                - &lt;video&gt; memutar file yang ada di server sendiri, cocok untuk video
+                yang dimiliki sendiri.<br>
+                - &lt;iframe&gt; YouTube memutar video dari server YouTube, sehingga tidak
+                memakan storage server sendiri namun membutuhkan koneksi internet dan
+                pengguna akan melihat branding YouTube.
+            </p>
+
+
+        </article>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 - Praktikum HTML5 | Anggun Sonya Meylani</p>
+    </footer>
+
+</body>
+</html>

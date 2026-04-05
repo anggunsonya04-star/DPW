@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <title> Audio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Ubah sesuai data Anda -->
+    <meta name="author" content="Anggun Sonya Meylani">
+    <meta name="nim" content="253307038">
+
+    <!-- Melengkapi Meta (Blok Bagian Hijau) -->
+    <meta name="description" content="Website praktikum HTML5 Lanjut">
+    <meta name="keywords" content="HTML5, Form, Audio, Video, SVG, Canvas">
+
+    <!-- Melengkapi Style (Blok Bagian Hijau) -->
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+        }
+
+        /* HEADER */
+        header {
+            background-color: #666;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+
+        /* NAVIGATION */
+        nav {
+            float: left;
+            width: 30%;
+            height: 300px;
+            /* hanya untuk demo */
+            background: #ccc;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-bottom: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        /* ARTICLE */
+        article {
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: #f1f1f1;
+            height: 660px;
+            /* hanya untuk demo */
+        }
+
+        /* CLEAR FLOAT */
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 600px) {
+
+            nav,
+            article {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h2>Judul Website</h2>
+    </header>
+
+    <section>
+
+        <nav>
+            <!-- Melengkapi Navigation Link (Blok Bagian Hijau) -->
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gambar.html">Gambar</a></li>
+            <li><a href="event.html">Event</a></li>
+            <li><a href="audio.html">Audio</a></li>
+            <li><a href="video.html">Video</a></li>
+            <li><a href="svg.html">SVG</a></li>
+            <li><a href="canvas.html">Canvas</a></li>
+            <li><a href="pendaftaran.html">Pendaftaran</a></li>
+        </nav>
+
+        <article>
+            <h1>Audio HTML5</h1>
+
+            <h3>JUMP - Track 1</h3>
+            <audio controls autoplay muted>
+                <source src="audio/Shape Of My Heart - Backstreet Boys (Lyrics) 🎵 - Pillow (128k).mp3" type="audio/mpeg">
+                Browser tidak mendukung audio.
+            </audio>
+
+            <h3>DPS - Track 2</h3>
+            <audio controls autoplay muted>
+                <source src="audio/The 1975 - About You (Lyrics) - Music For You (youtube).mp3" type="audio/mpeg">
+                Browser tidak mendukung audio.
+            </audio>
+
+            <p>
+                <strong>Kesimpulan Uji Coba Audio:</strong><br><br>
+ 
+                <b>Tag &lt;audio&gt;</b> digunakan untuk menyematkan file suara ke dalam halaman web
+                tanpa memerlukan plugin tambahan. File audio didefinisikan menggunakan tag
+                &lt;source&gt; dengan atribut <b>src</b> (lokasi file) dan <b>type</b> (format file).<br><br>
+ 
+                <b>Atribut controls</b> → menampilkan panel kontrol audio bawaan browser
+                seperti tombol play/pause, pengatur volume, dan progress bar.
+                Tanpa atribut ini, audio tidak memiliki tampilan apapun di halaman.<br><br>
+ 
+                <b>Atribut autoplay</b> → menyebabkan audio langsung diputar otomatis
+                ketika halaman selesai dimuat. Namun di browser modern seperti Chrome dan Firefox,
+                autoplay akan diblokir jika tidak disertai atribut <b>muted</b> karena
+                kebijakan browser untuk mencegah gangguan kepada pengguna.<br><br>
+ 
+                <b>Atribut muted</b> → membuat audio diputar dalam kondisi bisu (tidak bersuara).
+                Jika dikombinasikan dengan autoplay, audio akan langsung diputar otomatis
+                namun tanpa suara. Pengguna masih bisa mengaktifkan suara secara manual
+                melalui panel kontrol.<br><br>
+ 
+            </p>
+
+        </article>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2026 - Praktikum HTML5 | Anggun Sonya</p>
+    </footer>
+
+</body>
+
+</html>

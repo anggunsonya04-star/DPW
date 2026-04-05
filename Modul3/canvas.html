@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <title>Canvas</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Ubah sesuai data Anda -->
+    <meta name="author" content="Anggun Sonya Meylani">
+    <meta name="nim" content="253307038">
+
+    <!-- Melengkapi Meta (Blok Bagian Hijau) -->
+    <meta name="description" content="Website praktikum HTML5 Lanjut">
+    <meta name="keywords" content="HTML5, Form, Audio, Video, SVG, Canvas">
+
+    <!-- Melengkapi Style (Blok Bagian Hijau) -->
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+        }
+
+        /* HEADER */
+        header {
+            background-color: #666;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+
+        /* NAVIGATION */
+        nav {
+            float: left;
+            width: 30%;
+            height: 300px;
+            /* hanya untuk demo */
+            background: #ccc;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-bottom: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        /* ARTICLE */
+        article {
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: #f1f1f1;
+            height: 660px;
+            /* hanya untuk demo */
+        }
+
+        /* CLEAR FLOAT */
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 600px) {
+
+            nav,
+            article {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h2>Judul Website</h2>
+    </header>
+
+    <section>
+
+        <nav>
+            <!-- Melengkapi Navigation Link (Blok Bagian Hijau) -->
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gambar.html">Gambar</a></li>
+            <li><a href="event.html">Event</a></li>
+            <li><a href="audio.html">Audio</a></li>
+            <li><a href="video.html">Video</a></li>
+            <li><a href="svg.html">SVG</a></li>
+            <li><a href="canvas.html">Canvas</a></li>
+            <li><a href="pendaftaran.html">Pendaftaran</a></li>
+        </nav>
+
+        <article>
+            <h1>Contoh Canvas</h1>
+
+            <canvas id="myCanvas" width="300" height="200" style="border:1px solid #000;">
+            </canvas>
+
+            <script>
+                var c = document.getElementById("myCanvas");
+                var ctx = c.getContext("2d");
+
+                ctx.fillStyle = "blue";
+                ctx.fillRect(50, 50, 150, 100);
+            </script>
+
+            <p><b>Kesimpulan:</b><br>
+                Elemen canvas digunakan untuk menampilkan gambar atau grafik secara dinamis dengan bantuan JavaScript. Melalui praktikum ini, dapat dipahami cara mengatur ukuran, tampilan, serta menggambar objek pada canvas menggunakan file JavaScript eksternal.
+            </p>
+
+        </article>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2026 - Praktikum HTML5 | Anggun Sonya</p>
+    </footer>
+
+</body>
+
+</html>

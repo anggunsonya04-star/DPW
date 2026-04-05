@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Event</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Anggun Sonya Meylani">
+    <meta name="nim" content="253307038">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+        }
+        header {
+            background-color: #666;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+        nav {
+            float: left;
+            width: 30%;
+            min-height: 400px;
+            background: #ccc;
+            padding: 20px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            margin-bottom: 10px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        article {
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: #f1f1f1;
+            min-height: 400px;
+        }
+        img {
+            background-color: chocolate;
+            padding: 10px;
+            width: 278px;
+            height: 220px;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.2s, opacity 0.2s;
+        }
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+        #pesan {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #fff3cd;
+            border: 1px solid #ffc107;
+            border-radius: 4px;
+            font-weight: bold;
+            min-height: 40px;
+        }
+        @media (max-width: 600px) {
+            nav, article {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h2>Judul Website</h2>
+    </header>
+
+    <section>
+        <nav>
+            <!-- Melengkapi Navigation Link (Blok Bagian Hijau) -->
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gambar.html">Gambar</a></li>
+            <li><a href="event.html">Event</a></li>
+            <li><a href="audio.html">Audio</a></li>
+            <li><a href="video.html">Video</a></li>
+            <li><a href="svg.html">SVG</a></li>
+            <li><a href="canvas.html">Canvas</a></li>
+            <li><a href="pendaftaran.html">Pendaftaran</a></li>
+       
+        </nav>
+
+        <article>
+            <h1>Mouse Event pada Gambar</h1>
+
+            <div id="pesan">Arahkan mouse atau klik pada gambar untuk melihat event!</div>
+
+            <!-- Gambar 1: onclick -->
+            <img src="image/gambar1.jpg" alt="Gambar 1"
+                onclick="tampilPesan('onclick: Gambar 1 diklik!')"
+                title="Klik gambar ini">
+
+            <!-- Gambar 2: onmouseover & onmouseout -->
+            <img src="image/gambar2.jpg" alt="Gambar 2"
+                onmouseover="this.style.opacity='0.5'; tampilPesan('onmouseover: Mouse masuk ke Gambar 2')"
+                onmouseout="this.style.opacity='1'; tampilPesan('onmouseout: Mouse keluar dari Gambar 2')"
+                title="Arahkan mouse ke gambar ini">
+
+            <!-- Gambar 3: ondblclick -->
+            <img src="image/gambar3.jpg" alt="Gambar 3"
+                ondblclick="tampilPesan('ondblclick: Gambar 3 diklik dua kali!')"
+                title="Klik dua kali gambar ini">
+
+            <!-- Gambar 4: onmousedown & onmouseup -->
+            <img src="image/gambar4.jpg" alt="Gambar 4"
+                onmousedown="this.style.transform='scale(0.95)'; tampilPesan('onmousedown: Tombol mouse ditekan pada Gambar 4')"
+                onmouseup="this.style.transform='scale(1)'; tampilPesan('onmouseup: Tombol mouse dilepas pada Gambar 4')"
+                title="Tekan dan lepas mouse di gambar ini">
+
+            <!-- Gambar 5: onmousemove -->
+            <img src="image/gambar5.jpg" alt="Gambar 5"
+                onmousemove="tampilPesan('onmousemove: Mouse bergerak di atas Gambar 5')"
+                title="Gerakkan mouse di atas gambar ini">
+
+            <!-- Gambar 6: onmouseenter & onmouseleave -->
+            <img src="image/gambar6.jpg" alt="Gambar 6"
+                onmouseenter="this.style.transform='scale(1.05)'; tampilPesan('onmouseenter: Mouse memasuki area Gambar 6')"
+                onmouseleave="this.style.transform='scale(1)'; tampilPesan('onmouseleave: Mouse meninggalkan area Gambar 6')"
+                title="Arahkan mouse ke gambar ini">
+
+            </p>
+            <p>
+                <strong>Kesimpulan Mouse Event:</strong><br>
+                <b>onclick</b> → event dipicu ketika gambar diklik satu kali.<br>
+                <b>ondblclick</b> → event dipicu ketika gambar diklik dua kali berturut-turut.<br>
+                <b>onmouseover</b> → event dipicu ketika kursor mouse masuk ke area elemen (termasuk elemen anak).<br>
+                <b>onmouseout</b> → event dipicu ketika kursor mouse keluar dari area elemen.<br>
+                <b>onmouseenter</b> → mirip onmouseover namun tidak dipicu oleh elemen anak di dalamnya.<br>
+                <b>onmouseleave</b> → mirip onmouseout namun tidak dipicu oleh elemen anak di dalamnya.<br>
+                <b>onmousedown</b> → event dipicu ketika tombol mouse ditekan (belum dilepas).<br>
+                <b>onmouseup</b> → event dipicu ketika tombol mouse yang ditekan dilepaskan.<br>
+                <b>onmousemove</b> → event dipicu terus-menerus selama kursor mouse bergerak di atas elemen.<br>
+                Mouse event sangat berguna untuk membuat halaman web lebih interaktif tanpa harus berpindah halaman.
+            </p>
+        </article>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 - Praktikum HTML5 | Anggun Sonya Meylani</p>
+    </footer>
+
+    <script>
+        function tampilPesan(pesan) {
+            document.getElementById('pesan').innerHTML = pesan;
+        }
+    </script>
+
+</body>
+</html>
