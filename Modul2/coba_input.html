@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Type Input</title>
+    <link rel="icon" type="img/png" href="gambar/favicon.png" sizes="16x16">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+</head> 
+<body>
+    <label for="username">type "text":</label><br>
+    <input type="text" id="username" name="username"><br>
+    <label for="pwd">type "password:"</label><br>
+    <input type="password" id="pwd" name="pwd"><br><br>
+
+    <br>
+    <hr>
+    <h3>Uji Coba 2</h3>
+    <input type="radio" id="html" value="HTML">
+    <label for="html">HTML</label><br>
+    <input type="radio" id="css" value="CSS">
+    <label for="css">CSS</label><br>
+    <input type="radio" id="javascript" value="JavaScript">
+    <label for="javascript">JavaScript</label>
+    <p>Kesimpulan: ketika atribut "name" tidak diberikan, semua pilihan radio button dapat dipilih secara bersamaan karena browser menganggap mereka tidak saling berhubungan. Ketika atribut "name" diberikan dengan nilai yang sama pada semua radio button (seperti name="pilihan"), hanya satu pilihan yang bisa dipilih dalam satu waktu — pilihan baru akan otomatis membatalkan pilihan sebelumnya. Ketika atribut "name" diberikan dengan nilai yang berbeda pada setiap radio button, masing-masing berdiri sendiri sehingga semua bisa dipilih bersamaan, sama seperti tidak diberi name. Sehingga atribut "name" yang sama pada radio button berfungsi untuk mengelompokkan pilihan agar hanya satu yang bisa dipilih dalam satu grup.</p>
+
+    <br>
+    <hr>
+    <h3>Uji Coba 3</h3>
+    <input type="checkbox" id="id1" value="Bike">
+    <label for="id1">I have a bike</label><br>
+    <input type="checkbox" id="id2" value="Car">
+    <label for="id2">I have a car</label><br>
+    <input type="checkbox" id="id3" value="Motorcycle">
+    <label for="id3">I have a motorcycle</label>
+    <p>Kesimpulan: Checkbox memungkinkan pengguna untuk memilih lebih dari satu pilihan sekaligus. Atribut "name" pada checkbox tidak membatasi jumlah pilihan — baik diberi name yang sama maupun berbeda, semua checkbox tetap bisa dicentang bersamaan. Atribut "name" pada checkbox berfungsi untuk pengelompokan data saat dikirim ke server, bukan untuk membatasi pilihan.</p>
+
+    <br>
+    <hr>
+    <h3>Uji coba 4</h3>
+    <label for="favcolor">Pilih Warna dengan type="color":</label>
+    <input type="color" id="favcolor" name="favcolor"><br>
+    <label for="b">Pilih tanggal dengan type="date":</label>
+    <input type="date" id="b" name="tanggal"><br>
+    <input type="button" onclick="alert('Hello World!')" value="Click Me!"> <br>
+    <p>Kesimpulan: Input type="color" menampilkan color picker sehingga pengguna dapat memilih warna dengan mudah secara visual. Input type="date" menampilkan kalender untuk memilih tanggal, sehingga format tanggal selalu konsisten. Input type="button" menampilkan tombol yang bisa menjalankan fungsi JavaScript melalui atribut onclick, sangat berguna untuk interaksi tanpa harus mengirim form.</p>
+
+    <br>
+    <hr>
+    <h3>Uji Coba 5</h3>
+    <label for="birthdaytime">input dengan type datetime-local:</label>
+    <input type="datetime-local" id="birthdaytime" name="birthdaytime"><br>
+    <label for="bdaymonth">input dengan type month:</label>
+    <input type="month" id="bdaymonth" name="bdaymonth"><br>
+    <label for="email">Enter your email:</label> 
+    <input type="email" id="email" name="email"><br>
+    <p>Kesimpulan: Input type="datetime-local" memungkinkan pengguna memilih tanggal sekaligus waktu (jam dan menit). Tampilan dapat berbeda antar browser. Input type="month" memungkinkan memilih bulan dan tahun saja tanpa tanggal spesifik. Input type="email" secara otomatis memvalidasi format email — browser akan menolak input yang tidak mengandung karakter "@" saat form disubmit. Tampilan di beberapa browser lama mungkin sama seperti input teks biasa.</p>
+
+    <br>
+    <hr>
+    <h3>Uji Coba 6</h3>
+    <input type="image" src="gambar/icon.jpg" alt="Submit" width="48" height="48"><br>
+    <label for="myfile">Pilih File</label>
+    <input type="file" id="myfile" name="myfile"><br>
+    <input type="hidden" id="custId" name="custId" value="3487"><br>
+    <p>Kesimpulan: Input type="image" menampilkan gambar yang berfungsi sebagai tombol submit, berguna untuk membuat tombol kirim yang lebih menarik secara visual. Input type="file" menampilkan tombol untuk memilih file dari perangkat pengguna, cocok untuk fitur upload foto atau dokumen. Input type="hidden" tidak ditampilkan kepada pengguna sama sekali, namun nilainya tetap dikirim ke server saat form disubmit. Berguna untuk menyimpan data seperti ID pengguna atau token keamanan secara tersembunyi.
+
+</p>
+
+    <br>
+    <hr>
+    <h3>Uji Coba 7</h3>
+    <label for="quantity">Quantity (between 1 and 5):</label>
+    <input type="number" id="quantity" name="quantity" min="1" max="10"><br>
+    <label for="vol">Volume (between 0 and 50):</label>
+    <input type="range" id="vol" name="vol" min="0" max="50"><br>
+    <p>Kesimpulan: Input type="number" menampilkan kotak angka dengan tombol naik/turun. Atribut min dan max membatasi nilai yang bisa diinput. Ketika nilai min diubah menjadi -50, slider/angka akan dimulai dari -50 sehingga pengguna dapat memilih nilai negatif. Input type="range" menampilkan slider yang lebih intuitif untuk memilih nilai dalam rentang tertentu, namun tidak menampilkan nilai secara langsung kepada pengguna./p>
+
+    <br>
+    <hr>
+    <h3>Uji Coba 8</h3>
+    <label for="homepage">Add your homepage:</label>
+    <input type="url" id="homepage" name="homepage"><br>
+    <label for="gsearch">Search Google:</label>
+    <input type="search" id="gsearch" name="gsearch"><br>
+    <label for="ph">Enter your phone number:</label>
+    <input type="tel" id="ph" name="phone" pattern="[0-9] {3}-[0-9]{2}-[0-9]{3}"><br>
+    <p>Kesimpulan: Input type="url" memvalidasi bahwa nilai yang dimasukkan merupakan format URL yang valid (harus diawali https:// atau http://). Browser akan menampilkan peringatan jika format salah. Input type="search" tampilannya mirip input teks biasa namun beberapa browser menambahkan tombol "X" untuk menghapus teks dengan cepat. Input type="tel" tidak memvalidasi format nomor telepon secara otomatis di semua browser. Atribut "pattern" dapat digunakan untuk menentukan format yang valid. Di perangkat mobile, input ini akan menampilkan keyboard angka.</p>
+    
+    <br>
+    <hr>
+    <h3>Uji Coba 9</h3>
+    <label for="appt">Select a time:</label>
+    <input type="time" id="appt" name="appt"><br>
+    <label for="week">Select a week:</label>
+    <input type="week" id="week" name="week"><br>
+    <p>Kesimpulan: Input type="time" menampilkan picker untuk memilih jam dan menit. Di beberapa browser lama atau Firefox, tampilannya mungkin berupa input teks biasa. Input type="week" memungkinkan pengguna memilih minggu ke berapa dalam satu tahun. Dukungan antar browser tidak seragam — Chrome mendukung dengan baik, namun Firefox dan Safari mungkin menampilkannya sebagai input teks biasa. Kesimpulan umum: Tidak semua tipe input HTML5 didukung secara penuh oleh semua browser. Browser modern seperti Chrome cenderung mendukung lebih banyak tipe input dibandingkan browser lama.</p>
+
+
+</body>
+</html>

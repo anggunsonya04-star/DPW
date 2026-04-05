@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Div dan Span</title>
+    <link rel="icon" type="img/png" href="gambar/icon web.png" sizes="16x16" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='css/main.css'>
+</head>
+<body>
+
+    <div id="header">
+        <h1>Judul/Header Website</h1>
+    </div>
+
+    <div id="main">
+        <div id="link">
+            <ul>
+                <li><a href="https://en.wikipedia.org/wiki/London" target="_blank">London</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Paris" target="_blank">Paris</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Tokyo" target="_blank">Tokyo</a></li>
+            </ul>
+        </div>
+
+        <div id="content">
+
+            <img src="gambar/workplace.jpg" alt="Workplace" usemap="#petagambar">
+
+            <map name="petagambar">
+                <area shape="rect" coords="34,44,270,350" alt="Computer" href="https://en.wikipedia.org/wiki/Computer">
+                <area shape="rect" coords="290,172,333,250" alt="Phone" href="https://en.wikipedia.org/wiki/Telephone">
+                <area shape="circle" coords="337,300,44" alt="Coffee" href="https://en.wikipedia.org/wiki/Coffee">
+            </map>
+
+            <p>
+                <strong>Keterangan Image Map:</strong><br>
+                Tag &lt;map&gt; mendefinisikan peta gambar yaitu gambar yang memiliki area-area yang dapat diklik.
+                Setiap area ditentukan menggunakan tag &lt;area&gt; dengan atribut berikut:<br>
+                - <strong>shape</strong>: bentuk area klik, bisa "rect" (persegi), "circle" (lingkaran), atau "poly" (poligon)<br>
+                - <strong>coords</strong>: koordinat area klik pada gambar<br>
+                - <strong>href</strong>: URL tujuan ketika area diklik<br>
+                - <strong>alt</strong>: teks alternatif jika gambar tidak tampil<br><br>
+                Pada contoh di atas terdapat 3 area yang bisa diklik yaitu Computer, Phone, dan Coffee,
+                masing-masing akan mengarah ke halaman Wikipedia yang sesuai.
+            </p>
+
+        </div>
+    </div>
+
+    <div id="footer">
+        <i>copyright@2026byAnggunSonya_253307038</i>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Sederhana</title>
+    <link rel="icon" type="img/png" href="gambar/icon.png" sizes="16x16" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+    <form action="/action_page.php" method="post" target="_self">
+        <label for="depan">Nama depan:</label><br>
+        <input type="text" id="depan" name="i_name" value="Budi"><br>
+        <label for="n_belakang">Nama Belakang:</label><br>
+        <input type="text" id="n_belakang" name="i_belakan" value="Prawira"><br><br>
+        <input type="submit" value="Kirim">
+        <input type="reset" value="Reset">
+    </form>
+
+    <p>Jika Anda mengklik tombol "Kirim", data formulir akan dikirim ke halaman bernama "/action_page.php".</p>
+
+    <p>
+        <strong>Kesimpulan Ujicoba Form:</strong><br><br>
+
+        <strong>1. Tombol Reset:</strong><br>
+        Ketika tombol "Reset" ditekan, semua isian pada form akan kembali ke nilai awalnya (value default). 
+        Jika tidak ada value default, maka input akan dikosongkan. 
+        Reset tidak mengirim data ke server, hanya mengatur ulang tampilan form.<br><br>
+
+        <strong>2. Tombol Kirim:</strong><br>
+        Ketika tombol "Kirim" ditekan, data dari semua input dalam form akan dikirim ke halaman 
+        yang ditentukan pada atribut action ("/action_page.php"). 
+        Jika file action_page.php tidak ada, browser akan menampilkan halaman error 404.<br><br>
+
+        <strong>3. Atribut target="_self":</strong><br>
+        Hasil form akan dibuka di tab/halaman yang sama (default). 
+        Dengan target="_blank", hasil akan dibuka di tab baru. 
+        Dengan target="_parent", hasil dibuka di frame induk. 
+        Dengan target="_top", hasil dibuka di seluruh jendela browser.<br><br>
+
+        <strong>4. Atribut method="get" dan method="post":</strong><br>
+        Dengan method="get", data form akan terlihat di URL browser dalam bentuk 
+        query string (contoh: /action_page.php?i_name=Budi&i_belakan=Prawira). 
+        Data GET tersimpan di riwayat browser dan dapat di-bookmark, namun tidak aman 
+        untuk data sensitif dan memiliki batas panjang karakter.<br>
+        Dengan method="post", data form dikirim tersembunyi di dalam badan HTTP request 
+        sehingga tidak terlihat di URL. POST lebih aman untuk data sensitif seperti password, 
+        tidak tersimpan di riwayat browser, tidak dapat di-bookmark, dan tidak memiliki batas panjang data.
+    </p>
+
+</body>
+</html>
