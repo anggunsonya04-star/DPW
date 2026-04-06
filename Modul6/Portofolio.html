@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portofolio </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { font-family: 'Poppins', sans-serif; }
+
+    .navbar { box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
+    .nav-link { font-weight: 500; color: #333 !important; transition: color .2s; }
+    .nav-link:hover, .nav-link.active { color: #6c3bff !important; }
+    .navbar-brand span { color: #6c3bff; }
+    .btn-purple { background: #6c3bff; color: #fff; border: none; border-radius: 50px; padding: 12px 32px; font-weight: 600; transition: .3s; }
+    .btn-purple:hover { background: #5429e0; color: #fff; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(108,59,255,.4); }
+
+    /* PAGE HEADER */
+    .page-header {
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      padding: 100px 0 60px;
+      position: relative; overflow: hidden;
+    }
+    .page-header::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(circle at 30% 60%, rgba(108,59,255,0.3) 0%, transparent 60%);
+    }
+    .page-header h1 { font-size: 2.8rem; font-weight: 800; color: #fff; }
+    .page-header p { color: #a0a0b0; }
+    .breadcrumb-item a { color: #a78bfa; text-decoration: none; }
+    .breadcrumb-item.active { color: #fff; }
+    .breadcrumb-item+.breadcrumb-item::before { color: #a0a0b0; }
+
+    .section-tag { color: #6c3bff; font-weight: 600; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; }
+
+    /* FILTER */
+    .filter-btn { border: 2px solid #e0d8ff; color: #6c3bff; background: #fff; border-radius: 50px; padding: 8px 24px; font-weight: 600; font-size: 14px; cursor: pointer; transition: .3s; }
+    .filter-btn:hover, .filter-btn.active { background: #6c3bff; color: #fff; border-color: #6c3bff; }
+
+    /* PORTFOLIO CARD */
+    .porto-card {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid #f0f0f0;
+      transition: .3s;
+    }
+    .porto-card:hover { transform: translateY(-8px); box-shadow: 0 20px 50px rgba(108,59,255,.15); }
+    .porto-thumb {
+      height: 200px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    .porto-thumb .overlay {
+      position: absolute; inset: 0;
+      background: rgba(108,59,255,.85);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; transition: .3s;
+    }
+    .porto-card:hover .overlay { opacity: 1; }
+    .porto-body { padding: 20px; }
+    .porto-body h6 { font-weight: 700; color: #222; margin-bottom: 6px; }
+    .porto-body p { color: #888; font-size: 13px; margin-bottom: 10px; }
+    .porto-tag { background: #f4f0ff; color: #6c3bff; border-radius: 50px; padding: 4px 12px; font-size: 12px; font-weight: 600; display: inline-block; margin: 2px; }
+
+    /* GRADIENT COLORS for cards */
+    .bg-grad-1 { background: linear-gradient(135deg, #667eea, #764ba2); }
+    .bg-grad-2 { background: linear-gradient(135deg, #f093fb, #f5576c); }
+    .bg-grad-3 { background: linear-gradient(135deg, #4facfe, #00f2fe); }
+    .bg-grad-4 { background: linear-gradient(135deg, #43e97b, #38f9d7); }
+    .bg-grad-5 { background: linear-gradient(135deg, #fa709a, #fee140); }
+    .bg-grad-6 { background: linear-gradient(135deg, #a18cd1, #fbc2eb); }
+
+    /* STATS BAR */
+    .stat-mini { text-align: center; padding: 20px; }
+    .stat-mini .num { font-size: 2rem; font-weight: 800; color: #6c3bff; }
+
+    .nim-badge { background: #6c3bff; color: white; border-radius: 8px; padding: 8px 20px; display: inline-block; font-weight: 600; }
+    footer { background: #0f0c29; color: #a0a0b0; }
+    footer a { color: #a78bfa; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-white sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-4" href="Home.html">My<span>Website</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto gap-1">
+          <li class="nav-item"><a class="nav-link" href="Home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="About.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="Services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link active" href="Portofolio.html">Portofolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
+        </ul>
+        <a href="Contact.html" class="btn btn-purple ms-3">Hire Me</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <div class="container position-relative">
+      <nav aria-label="breadcrumb" class="mb-3">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="Home.html">Home</a></li>
+          <li class="breadcrumb-item active">Portofolio</li>
+        </ol>
+      </nav>
+      <h1>Portofolio Saya</h1>
+      <p>Kumpulan karya dan project yang telah saya selesaikan</p>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO SECTION -->
+  <section class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <div class="section-tag mb-2">— MY WORKS</div>
+        <h2 class="fw-bold" style="font-size:2rem;">Project Terbaru</h2>
+        <p class="text-muted">Beberapa project yang telah saya kerjakan</p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="d-flex flex-wrap gap-2 justify-content-center mb-5">
+        <button class="filter-btn active">Semua</button>
+        <button class="filter-btn">Web Design</button>
+        <button class="filter-btn">Landing Page</button>
+        <button class="filter-btn">Web App</button>
+      </div>
+
+      <!-- Portfolio Grid -->
+      <div class="row g-4">
+
+        <!-- Card 1 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="porto-card">
+            <div class="porto-thumb bg-grad-1">
+              🛍️
+              <div class="overlay">
+                <a href="#" class="btn btn-light btn-sm" style="border-radius:50px; font-weight:600;">Lihat Detail</a>
+              </div>
+            </div>
+            <div class="porto-body">
+              <h6>Toko Online Fashion</h6>
+              <p>Website e-commerce untuk toko fashion dengan tampilan modern dan responsif.</p>
+              <span class="porto-tag">HTML</span>
+              <span class="porto-tag">CSS</span>
+              <span class="porto-tag">Bootstrap</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="porto-card">
+            <div class="porto-thumb bg-grad-2">
+              🍕
+              <div class="overlay">
+                <a href="#" class="btn btn-light btn-sm" style="border-radius:50px; font-weight:600;">Lihat Detail</a>
+              </div>
+            </div>
+            <div class="porto-body">
+              <h6>Landing Page Restoran</h6>
+              <p>Halaman promosi restoran dengan menu interaktif dan sistem reservasi sederhana.</p>
+              <span class="porto-tag">HTML</span>
+              <span class="porto-tag">CSS</span>
+              <span class="porto-tag">JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+        
+  <!-- FOOTER -->
+  <footer class="py-4">
+    <div class="container text-center">
+      <p class="mb-1">© 2026 MyWebsite &nbsp;—&nbsp; <a href="#">Anggun Sonya Meylani</a> &nbsp;|&nbsp; NIM: 253307038</p>
+      <small>Dibuat dengan Bootstrap 5</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Filter button toggle
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

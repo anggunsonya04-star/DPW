@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { font-family: 'Poppins', sans-serif; }
+
+    /* NAVBAR */
+    .navbar { box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
+    .nav-link { font-weight: 500; color: #333 !important; transition: color .2s; }
+    .nav-link:hover, .nav-link.active { color: #6c3bff !important; }
+    .navbar-brand span { color: #6c3bff; }
+    .btn-purple { background: #6c3bff; color: #fff; border: none; border-radius: 50px; padding: 12px 32px; font-weight: 600; transition: .3s; }
+    .btn-purple:hover { background: #5429e0; color: #fff; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(108,59,255,.4); }
+
+    /* PAGE HEADER */
+    .page-header {
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      padding: 100px 0 60px;
+      position: relative; overflow: hidden;
+    }
+    .page-header::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(circle at 30% 50%, rgba(108,59,255,0.3) 0%, transparent 60%);
+    }
+    .page-header h1 { font-size: 2.8rem; font-weight: 800; color: #fff; }
+    .page-header p { color: #a0a0b0; font-size: 1rem; }
+    .breadcrumb-item a { color: #a78bfa; text-decoration: none; }
+    .breadcrumb-item.active { color: #fff; }
+    .breadcrumb-item+.breadcrumb-item::before { color: #a0a0b0; }
+
+    /* SECTION */
+    .section-tag { color: #6c3bff; font-weight: 600; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; }
+
+    /* ABOUT IMAGE */
+    .about-img-wrapper {
+      position: relative;
+    }
+    .about-img-box {
+      width: 100%; border-radius: 20px;
+      background: linear-gradient(135deg, #6c3bff, #a78bfa);
+      aspect-ratio: 1;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 100px;
+      box-shadow: 0 20px 60px rgba(108,59,255,.3);
+    }
+    .exp-badge {
+      position: absolute; bottom: -20px; right: -10px;
+      background: #fff;
+      border-radius: 16px;
+      padding: 16px 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.12);
+      text-align: center;
+    }
+    .exp-badge .num { font-size: 2rem; font-weight: 800; color: #6c3bff; line-height: 1; }
+    .exp-badge .label { font-size: 12px; color: #888; }
+
+    /* INFO CARD */
+    .info-item { padding: 10px 0; border-bottom: 1px solid #f0f0f0; }
+    .info-item:last-child { border-bottom: none; }
+    .info-label { font-weight: 600; color: #333; min-width: 130px; }
+    .info-value { color: #666; }
+
+    /* SKILL BAR */
+    .skill-item { margin-bottom: 20px; }
+    .skill-label { display: flex; justify-content: space-between; font-weight: 600; font-size: 14px; margin-bottom: 8px; }
+    .progress { height: 8px; border-radius: 50px; background: #f0ecff; }
+    .progress-bar { background: linear-gradient(90deg, #6c3bff, #a78bfa); border-radius: 50px; }
+
+    /* EDUCATION / EXPERIENCE */
+    .timeline-item { position: relative; padding-left: 30px; margin-bottom: 30px; }
+    .timeline-item::before {
+      content: '';
+      position: absolute; left: 0; top: 6px;
+      width: 14px; height: 14px;
+      border-radius: 50%; background: #6c3bff;
+      box-shadow: 0 0 0 4px #f4f0ff;
+    }
+    .timeline-item::after {
+      content: '';
+      position: absolute; left: 6px; top: 20px;
+      width: 2px; height: calc(100% + 10px);
+      background: #e8e0ff;
+    }
+    .timeline-item:last-child::after { display: none; }
+    .timeline-year { background: #f4f0ff; color: #6c3bff; border-radius: 50px; padding: 2px 14px; font-size: 12px; font-weight: 600; display: inline-block; margin-bottom: 6px; }
+    .timeline-title { font-weight: 700; color: #222; margin-bottom: 4px; }
+    .timeline-place { color: #888; font-size: 14px; }
+
+    .nim-badge { background: #6c3bff; color: white; border-radius: 8px; padding: 8px 20px; display: inline-block; font-weight: 600; }
+
+    footer { background: #0f0c29; color: #a0a0b0; }
+    footer a { color: #a78bfa; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-white sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-4" href="Home.html">My<span>Website</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto gap-1">
+          <li class="nav-item"><a class="nav-link" href="Home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="About.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="Services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="Portofolio.html">Portofolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
+        </ul>
+        <a href="Contact.html" class="btn btn-purple ms-3">Hire Me</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <div class="container position-relative">
+      <nav aria-label="breadcrumb" class="mb-3">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="Home.html">Home</a></li>
+          <li class="breadcrumb-item active">About</li>
+        </ol>
+      </nav>
+      <h1>Tentang Saya</h1>
+      <p>Kenali lebih dekat siapa saya dan perjalanan saya</p>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="py-5 mt-4">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <!-- Image -->
+        <div class="col-lg-5">
+          <div class="about-img-wrapper">
+            <div class="about-img-box">👩‍💻</div>
+            <div class="exp-badge">
+              <div class="num">2+</div>
+              <div class="label">Tahun Belajar</div>
+            </div>
+          </div>
+        </div>
+        <!-- Text -->
+        <div class="col-lg-7">
+          <div class="section-tag mb-2">— ABOUT ME</div>
+          <h2 class="fw-800 mb-3" style="font-size:2rem; font-weight:800;">Halo! Saya <span style="color:#6c3bff;">Anggun Sonya Meylani</span></h2>
+          <div class="nim-badge mb-4">NIM: 253307038</div>
+          <p class="text-muted mt-3">Saya adalah mahasiswa Teknologi Informasi yang memiliki passion besar di bidang web development. Saya senang menciptakan tampilan website yang menarik, modern, dan responsif.</p>
+          <p class="text-muted">Dengan menggunakan teknologi seperti HTML, CSS, JavaScript, dan framework seperti Bootstrap, saya terus belajar dan berkembang untuk menghasilkan karya terbaik.</p>
+
+          <!-- Info -->
+          <div class="mt-4">
+            <div class="info-item d-flex gap-3">
+              <span class="info-label">Nama</span>
+              <span class="info-value">: Anggun Sonya Meylani</span>
+            </div>
+            <div class="info-item d-flex gap-3">
+              <span class="info-label">NIM</span>
+              <span class="info-value">: 253307038</span>
+            </div>
+            <div class="info-item d-flex gap-3">
+              <span class="info-label">Program Studi</span>
+              <span class="info-value">: Teknologi Informasi</span>
+            </div>
+            <div class="info-item d-flex gap-3">
+              <span class="info-label">Email</span>
+              <span class="info-value">: anggun@example.com</span>
+            </div>
+            <div class="info-item d-flex gap-3">
+              <span class="info-label">Lokasi</span>
+              <span class="info-value">: Indonesia</span>
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <a href="Contact.html" class="btn btn-purple me-2">Hubungi Saya</a>
+            <a href="Portofolio.html" class="btn btn-outline-secondary" style="border-radius:50px; padding:12px 28px; font-weight:600;">Lihat Portfolio</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-4">
+    <div class="container text-center">
+      <p class="mb-1">© 2026 MyWebsite &nbsp;—&nbsp; <a href="#">Anggun Sonya Meylani</a> &nbsp;|&nbsp; NIM: 253307038</p>
+      <small>Dibuat dengan Bootstrap 5</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
