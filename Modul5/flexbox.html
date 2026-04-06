@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Belajar Flex Box</title>
+  <style>
+    
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f4f8;
+      padding: 20px;
+      color: #333;
+    }
+
+    h2 {
+      margin-top: 40px;
+      background: #2c3e50;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 6px;
+    }
+
+    .keterangan {
+      background: #fff;
+      border-left: 4px solid #3498db;
+      padding: 10px 14px;
+      margin-bottom: 10px;
+      font-size: 14px;
+      border-radius: 0 6px 6px 0;
+    }
+
+    /* ===== SKENARIO 1: display flex dasar ===== */
+    .skenario1 .wadah_flex {
+      display: flex;
+      background: #ecf0f1;
+      padding: 10px;
+      border: 2px dashed #95a5a6;
+    }
+
+    .skenario1 .wadah_flex > div {
+      background-color: #3498db;
+      margin: 10px;
+      padding: 20px;
+      font-size: 30px;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    /* ===== SKENARIO 2: tambah style anak ===== */
+    .skenario2 .wadah_flex {
+      display: flex;
+      background: #ecf0f1;
+      padding: 10px;
+      border: 2px dashed #95a5a6;
+    }
+
+    .skenario2 .wadah_flex > div {
+      background-color: #e74c3c;
+      margin: 10px;
+      padding: 20px;
+      font-size: 30px;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    /* ===== SKENARIO 3: flex-direction ===== */
+    .skenario3 .wadah_flex {
+      display: flex;
+      flex-direction: column; /* coba: row | row-reverse | column | column-reverse */
+      background: #ecf0f1;
+      padding: 10px;
+      border: 2px dashed #95a5a6;
+    }
+
+    .skenario3 .wadah_flex > div {
+      background-color: #9b59b6;
+      margin: 10px;
+      padding: 20px;
+      font-size: 30px;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    /* ===== SKENARIO 4: flex-wrap ===== */
+    .skenario4 .wadah_flex {
+      display: flex;
+      flex-wrap: wrap; /* coba: nowrap | wrap | wrap-reverse */
+      background: #ecf0f1;
+      padding: 10px;
+      border: 2px dashed #95a5a6;
+    }
+
+    .skenario4 .wadah_flex > div {
+      background-color: #27ae60;
+      margin: 10px;
+      padding: 20px;
+      font-size: 30px;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      width: 100px;
+    }
+
+    /* ===== SKENARIO 5: flex-flow (gabungan direction + wrap) ===== */
+    .skenario5 .wadah_flex {
+      display: flex;
+      flex-flow: row wrap; /* coba: row nowrap | row wrap | column wrap | column-reverse wrap-reverse */
+      background: #ecf0f1;
+      padding: 10px;
+      border: 2px dashed #95a5a6;
+    }
+
+    .skenario5 .wadah_flex > div {
+      background-color: #e67e22;
+      margin: 10px;
+      padding: 20px;
+      font-size: 30px;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      width: 100px;
+    }
+
+    /* ===== SKENARIO 6: justify-content ===== */
+    .skenario6 .wadah_flex {
+      display: flex;
+      justify-content: space-between; /* coba: flex-start | flex-end | center | space-between | space-around | space-evenly */
+      background: #ecf0f1;
+      padding: 10px;
+      border: 2px dashed #95a5a6;
+    }
+
+    .skenario6 .wadah_flex > div {
+      background-color: #16a085;
+      margin: 10px;
+      padding: 20px;
+      font-size: 30px;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    /* ===== KESIMPULAN ===== */
+    .kesimpulan {
+      background: #fefefe;
+      border: 1px solid #ddd;
+      padding: 10px 16px;
+      border-radius: 6px;
+      margin-top: 10px;
+      font-style: italic;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== SKENARIO 1 ===== -->
+  <h2>Skenario 1 – display: flex (dasar)</h2>
+  <div class="skenario1">
+    <div class="wadah_flex">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+  </div>
+  <p class="kesimpulan">
+    Kesimpulan skenario 1 adalah: Dengan menambahkan <code>display: flex</code> pada elemen induk,
+    semua elemen anak akan tersusun secara horizontal (dalam satu baris) secara default,
+    berbeda dengan tampilan block biasa yang tersusun vertikal.
+  </p>
+
+  <!-- ===== SKENARIO 2 ===== -->
+  <h2>Skenario 2 – Style pada div anak</h2>
+  <div class="skenario2">
+    <div class="wadah_flex">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+  </div>
+  <p class="kesimpulan">
+    Kesimpulan skenario 2 adalah: Menambahkan properti CSS seperti background-color, margin, padding,
+    dan font-size pada div anak membuat tampilan lebih menarik dan terstruktur. Setiap item flex
+    dapat diberi gaya secara individual.
+  </p>
+
+  <!-- ===== SKENARIO 3 ===== -->
+  <h2>Skenario 3 – flex-direction</h2>
+  <div class="skenario3">
+    <div class="wadah_flex">
+      <div>1</div><div>2</div><div>3</div><div>4</div>
+      <div>5</div><div>6</div><div>7</div><div>8</div>
+      <div>9</div><div>10</div><div>11</div><div>12</div>
+    </div>
+  </div>
+  <p class="kesimpulan">
+    Kesimpulan skenario 3 adalah: Properti <code>flex-direction</code> menentukan arah susunan item flex.
+    Nilai <code>row</code> menyusun item secara horizontal (kiri ke kanan), <code>column</code> secara vertikal (atas ke bawah),
+    sedangkan <code>row-reverse</code> dan <code>column-reverse</code> membalik arah susunan tersebut.
+  </p>
+
+  <!-- ===== SKENARIO 4 ===== -->
+  <h2>Skenario 4 – flex-wrap</h2>
+  <div class="skenario4">
+    <div class="wadah_flex">
+      <div>1</div><div>2</div><div>3</div><div>4</div>
+      <div>5</div><div>6</div><div>7</div><div>8</div>
+      <div>9</div><div>10</div><div>11</div><div>12</div>
+    </div>
+  </div>
+  <p class="kesimpulan">
+    Kesimpulan skenario 4 adalah: Properti <code>flex-wrap</code> mengatur apakah item flex boleh berpindah ke baris baru.
+    Nilai <code>nowrap</code> memaksa semua item dalam satu baris (bisa overflow),
+    <code>wrap</code> memungkinkan item pindah ke baris berikutnya jika penuh,
+    dan <code>wrap-reverse</code> seperti wrap namun urutan baris dibalik.
+  </p>
+
+  <!-- ===== SKENARIO 5 ===== -->
+  <h2>Skenario 5 – flex-flow</h2>
+  <div class="skenario5">
+    <div class="wadah_flex">
+      <div>1</div><div>2</div><div>3</div><div>4</div>
+      <div>5</div><div>6</div><div>7</div><div>8</div>
+      <div>9</div><div>10</div><div>11</div><div>12</div>
+    </div>
+  </div>
+  <p class="kesimpulan">
+    Kesimpulan skenario 5 adalah: Properti <code>flex-flow</code> adalah singkatan (shorthand) dari
+    <code>flex-direction</code> dan <code>flex-wrap</code> yang digabungkan dalam satu deklarasi.
+    Hasilnya sama dengan menuliskan keduanya secara terpisah, namun lebih efisien dalam penulisan kode.
+  </p>
+
+  <!-- ===== SKENARIO 6 ===== -->
+  <h2>Skenario 6 – justify-content</h2>
+  <div class="skenario6">
+    <div class="wadah_flex">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+  </div>
+  <p class="kesimpulan">
+    Kesimpulan skenario 6 adalah: Properti <code>justify-content</code> mengatur distribusi ruang antar item flex
+    sepanjang sumbu utama (main axis). <code>flex-start</code> merapatkan ke kiri, <code>flex-end</code> ke kanan,
+    <code>center</code> ke tengah, <code>space-between</code> memberi jarak merata antar item (tanpa jarak di tepi),
+    <code>space-around</code> memberi jarak di sekeliling item, dan <code>space-evenly</code> memberi jarak
+    yang benar-benar sama rata di semua sisi termasuk tepi.
+  </p>
+
+</body>
+</html>

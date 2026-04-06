@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Belajar grid</title>
+  <style>
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f4f8;
+      padding: 20px;
+    }
+
+    h1 { color: #2c3e50; }
+
+    .label {
+      background: #2c3e50;
+      color: white;
+      padding: 6px 14px;
+      border-radius: 4px;
+      font-size: 14px;
+      margin: 30px 0 8px;
+      display: inline-block;
+    }
+
+    .kesimpulan {
+      background: #fff;
+      border-left: 4px solid #2196F3;
+      padding: 10px 14px;
+      margin: 10px 0 30px;
+      font-style: italic;
+      color: #555;
+      border-radius: 0 6px 6px 0;
+    }
+
+    /* ===== BASE STYLE SEMUA SKENARIO ===== */
+    .grid-container {
+      display: grid;
+      grid-gap: 50px;
+      background-color: #2196F3;
+      padding: 10px;
+    }
+
+    .item1 {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+    }
+
+    .item {
+      background-color: rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      font-size: 30px;
+      text-align: center;
+    }
+
+    /* ===== SKENARIO 1: grid-column-start & grid-column-end ===== */
+    .s1 .item1 {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+
+    /* ===== SKENARIO 2a: grid-template-columns auto auto ===== */
+    .s2a {
+      grid-template-columns: auto auto;
+    }
+
+    /* ===== SKENARIO 2b: grid-template-columns 70px 300px auto 40px ===== */
+    .s2b {
+      grid-template-columns: 70px 300px auto 40px;
+    }
+
+    /* ===== SKENARIO 2c: grid-template-columns 10px 500px 20px 10px ===== */
+    .s2c {
+      grid-template-columns: 10px 500px 20px 10px;
+    }
+
+    /* ===== SKENARIO 3: grid-template-columns auto auto auto auto ===== */
+    .s3 {
+      grid-template-columns: auto auto auto auto;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ===== SKENARIO 1: grid-column-start & grid-column-end ===== -->
+  <div class="label">Skenario 1 – grid-column-start & grid-column-end</div>
+  <div class="grid-container s1">
+    <div class="item1">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+    <div class="item">8</div>
+    <div>Tulis kesimpulan disini</div>
+  </div>
+  <p class="kesimpulan">
+    Kesimpulan skenario 1 adalah: Properti <code>grid-column-start</code> dan <code>grid-column-end</code>
+    digunakan untuk mengatur posisi item pada grid. Dengan nilai <code>start: 1</code> dan <code>end: 3</code>,
+    item pertama (item1) akan merentang mulai dari garis kolom 1 hingga garis kolom 3,
+    sehingga item tersebut menempati 2 kolom sekaligus.
+  </p>
+
+  <!-- ===== SKENARIO 2a: auto auto ===== -->
+  <div class="label">Skenario 2a – grid-template-columns: auto auto</div>
+  <div class="grid-container s2a">
+    <div class="item1">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+    <div class="item">8</div>
+    <div>Tulis kesimpulan disini</div>
+  </div>
+
+  <!-- ===== SKENARIO 2b: 70px 300px auto 40px ===== -->
+  <div class="label">Skenario 2b – grid-template-columns: 70px 300px auto 40px</div>
+  <div class="grid-container s2b">
+    <div class="item1">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+    <div class="item">8</div>
+    <div>Tulis kesimpulan disini</div>
+  </div>
+
+  <!-- ===== SKENARIO 2c: 10px 500px 20px 10px ===== -->
+  <div class="label">Skenario 2c – grid-template-columns: 10px 500px 20px 10px</div>
+  <div class="grid-container s2c">
+    <div class="item1">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+    <div class="item">8</div>
+    <div>Tulis kesimpulan disini</div>
+  </div>
+  <p class="kesimpulan">
+    Kesimpulan skenario 2 adalah: Properti <code>grid-template-columns</code> menentukan jumlah kolom
+    sekaligus lebarnya. Nilai <code>auto</code> membagi ruang secara merata, sedangkan nilai dalam
+    piksel (px) menentukan lebar kolom secara eksplisit. Semakin banyak nilai yang ditulis,
+    semakin banyak kolom yang terbentuk, dan lebar tiap kolom mengikuti nilai yang ditetapkan.
+  </p>
+
+  <!-- ===== SKENARIO 3: auto auto auto auto ===== -->
+  <div class="label">Skenario 3 – grid-template-columns: auto auto auto auto</div>
+  <div class="grid-container s3">
+    <div class="item1">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+    <div class="item">8</div>
+    <div>Tulis kesimpulan disini</div>
+  </div>
+  <p class="kesimpulan">
+    Kesimpulan skenario 3 adalah: Dengan <code>grid-template-columns: auto auto auto auto</code>,
+    grid terbagi menjadi 4 kolom dengan lebar yang sama rata secara otomatis.
+    Item yang memiliki <code>grid-column-end</code> melebihi jumlah kolom yang ada akan
+    tetap merentang sesuai batas kolom yang tersedia.
+  </p>
+
+</body>
+</html>

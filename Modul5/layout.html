@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Layout CSS Grid</title>
+  <style>
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f4f8;
+      padding: 20px;
+    }
+
+    /* ===== GRID CONTAINER UTAMA ===== */
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr; /* 3 kolom: Menu | Main | Right */
+      grid-template-rows: auto auto auto;  /* 3 baris: Header | Tengah | Footer */
+      gap: 6px;
+      background-color: #2196F3;
+      padding: 6px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* ===== STYLE UMUM SEMUA ITEM ===== */
+    .grid-container > div {
+      background-color: #d6eaf8;
+      border: 2px solid #2196F3;
+      padding: 30px;
+      font-size: 20px;
+      text-align: center;
+      color: #1a5276;
+      font-weight: 500;
+    }
+
+    /* ===== HEADER: rentang 3 kolom penuh ===== */
+    .header {
+      grid-column: 1 / 4;
+    }
+ 
+    /* ===== MENU: rentang 2 baris (baris 2 dan 3) ===== */
+    .menu {
+      grid-column: 1 / 2;
+      grid-row: 2 / 4;
+    }
+ 
+    /* ===== MAIN: kolom 2, baris 2 ===== */
+    .main {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+    }
+ 
+    /* ===== RIGHT: kolom 3, baris 2 ===== */
+    .right {
+      grid-column: 3 / 4;
+      grid-row: 2 / 3;
+    }
+ 
+    /* ===== FOOTER: kolom 2-3, baris 3 ===== */
+    .footer {
+      grid-column: 2 / 4;
+      grid-row: 3 / 4;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="grid-container">
+    <div class="header">Header</div>
+    <div class="menu">Menu</div>
+    <div class="main">Main</div>
+    <div class="right">Right</div>
+    <div class="footer">Footer</div>
+  </div>
+
+</body>
+</html>

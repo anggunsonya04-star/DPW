@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Belajar grid</title>
+  <style>
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f4f8;
+      padding: 20px;
+    }
+
+    h1 { color: #2c3e50; }
+
+    .label {
+      background: #2c3e50;
+      color: white;
+      padding: 6px 14px;
+      border-radius: 4px;
+      font-size: 14px;
+      margin: 30px 0 8px;
+      display: inline-block;
+    }
+
+    .kesimpulan {
+      background: #fff;
+      border-left: 4px solid #2196F3;
+      padding: 10px 14px;
+      margin: 10px 0 30px;
+      font-style: italic;
+      color: #555;
+      border-radius: 0 6px 6px 0;
+    }
+
+    /* ===== BASE CONTAINER ===== */
+    .grid-container {
+      display: grid;
+      grid-gap: 50px;
+      background-color: #2196F3;
+      grid-template-columns: auto auto auto auto;
+      padding: 10px;
+    }
+
+    /* ===== ITEM BIASA ===== */
+    .item {
+      background-color: rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      font-size: 30px;
+      text-align: center;
+    }
+
+    /* ===== SKENARIO 1: grid-row ===== */
+    /* grid-row: 1/4 artinya item merentang dari baris 1 sampai baris 4 */
+    .s1 .item1 {
+      grid-row: 1 / 4;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      font-size: 30px;
+      text-align: center;
+    }
+
+    /* ===== SKENARIO 2: grid-column ===== */
+    /* grid-column: 1/4 artinya item merentang dari kolom 1 sampai kolom 4 */
+    .s2 .item1 {
+      grid-column: 1 / 4;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      font-size: 30px;
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ===== SKENARIO 1: grid-row ===== -->
+  <div class="label">Skenario 1 – grid-row: 1 / 4</div>
+  <div class="grid-container s1">
+    <div class="item1">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+    <div class="item">8</div>
+    <div>Tulis kesimpulan disini</div>
+  </div>
+  <p class="kesimpulan">
+    Kesimpulan skenario 1 adalah: Properti <code>grid-row</code> adalah shorthand dari
+    <code>grid-row-start</code> dan <code>grid-row-end</code>. Dengan nilai <code>1 / 4</code>,
+    item1 akan merentang secara vertikal mulai dari garis baris ke-1 hingga garis baris ke-4,
+    sehingga item tersebut menempati 3 baris sekaligus. Item lain akan mengisi ruang yang tersisa
+    di sebelahnya.
+  </p>
+
+  <!-- ===== SKENARIO 2: grid-column ===== -->
+  <div class="label">Skenario 2 – grid-column: 1 / 4</div>
+  <div class="grid-container s2">
+    <div class="item1">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+    <div class="item">8</div>
+    <div>Tulis kesimpulan disini</div>
+  </div>
+  <p class="kesimpulan">
+    Kesimpulan skenario 2 adalah: Properti <code>grid-column</code> adalah shorthand dari
+    <code>grid-column-start</code> dan <code>grid-column-end</code>. Dengan nilai <code>1 / 4</code>,
+    item1 akan merentang secara horizontal mulai dari garis kolom ke-1 hingga garis kolom ke-4,
+    sehingga item tersebut menempati 3 kolom sekaligus. Perbedaan dengan <code>grid-row</code>
+    adalah arahnya: <code>grid-row</code> merentang secara vertikal, sedangkan <code>grid-column</code>
+    merentang secara horizontal.
+  </p>
+
+</body>
+</html>

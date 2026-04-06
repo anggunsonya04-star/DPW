@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Belajar CSS Grid box</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f4f8;
+      padding: 20px;
+    }
+
+    h1 { color: #2c3e50; }
+
+    .label {
+      background: #2c3e50;
+      color: white;
+      padding: 6px 14px;
+      border-radius: 4px;
+      font-size: 14px;
+      margin: 30px 0 8px;
+      display: inline-block;
+    }
+
+    .kesimpulan {
+      background: #fff;
+      border-left: 4px solid #2196F3;
+      padding: 10px 14px;
+      margin: 10px 0 30px;
+      font-style: italic;
+      color: #555;
+      border-radius: 0 6px 6px 0;
+    }
+
+    .item_grid {
+      background-color: rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      font-size: 30px;
+      text-align: center;
+    }
+
+    /* ===== SKENARIO 1: display grid ===== */
+    .tempat_grid_s1 {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      background-color: #2196F3;
+      padding: 10px;
+    }
+
+    /* ===== SKENARIO 2: display inline-grid ===== */
+    .tempat_grid_s2 {
+      display: inline-grid;
+      grid-template-columns: auto auto auto;
+      background-color: #2196F3;
+      padding: 10px;
+    }
+
+    /* ===== SKENARIO 3: grid-column-gap & grid-row-gap ===== */
+    .tempat_grid_s3 {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      background-color: #2196F3;
+      padding: 10px;
+      grid-column-gap: 10px;
+      grid-row-gap: 50px;
+    }
+
+    /* ===== SKENARIO 4: grid-gap (shorthand) ===== */
+    .tempat_grid_s4 {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      background-color: #2196F3;
+      padding: 10px;
+      grid-gap: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== SKENARIO 1 ===== -->
+  <div class="label">Skenario 1 – display: grid</div>
+  <div class="tempat_grid_s1">
+    <div class="item_grid">1</div>
+    <div class="item_grid">2</div>
+    <div class="item_grid">3</div>
+    <div class="item_grid">4</div>
+    <div class="item_grid">5</div>
+    <div class="item_grid">6</div>
+    <div class="item_grid">7</div>
+    <div class="item_grid">8</div>
+    <div class="item_grid">9</div>
+  </div>
+  <p class="kesimpulan">
+    Kesimpulan skenario 1 adalah: Properti <code>display: grid</code> mengubah elemen menjadi grid container
+    (block-level). Elemen anak otomatis menjadi grid item dan tersusun dalam kolom sesuai
+    <code>grid-template-columns</code>. Container memenuhi seluruh lebar halaman.
+  </p>
+
+  <!-- ===== SKENARIO 2 ===== -->
+  <div class="label">Skenario 2 – display: inline-grid</div>
+  <div class="tempat_grid_s2">
+    <div class="item_grid">1</div>
+    <div class="item_grid">2</div>
+    <div class="item_grid">3</div>
+    <div class="item_grid">4</div>
+    <div class="item_grid">5</div>
+    <div class="item_grid">6</div>
+    <div class="item_grid">7</div>
+    <div class="item_grid">8</div>
+    <div class="item_grid">9</div>
+    <div>Tulis kesimpulan ujicoba disini !</div>
+  </div>
+  <p class="kesimpulan">
+    Kesimpulan skenario 2 adalah: Perbedaan <code>display: grid</code> dan <code>display: inline-grid</code>
+    terletak pada ukuran container. <code>inline-grid</code> membuat container hanya selebar kontennya
+    (inline-level), sedangkan <code>grid</code> memenuhi seluruh lebar halaman (block-level).
+  </p>
+
+  <!-- ===== SKENARIO 3 ===== -->
+  <div class="label">Skenario 3 – grid-column-gap & grid-row-gap</div>
+  <div class="tempat_grid_s3">
+    <div class="item_grid">1</div>
+    <div class="item_grid">2</div>
+    <div class="item_grid">3</div>
+    <div class="item_grid">4</div>
+    <div class="item_grid">5</div>
+    <div class="item_grid">6</div>
+    <div class="item_grid">7</div>
+    <div class="item_grid">8</div>
+    <div class="item_grid">9</div>
+  </div>
+  <p class="kesimpulan">
+    Kesimpulan skenario 3 adalah: Properti <code>grid-column-gap</code> mengatur jarak antar kolom,
+    sedangkan <code>grid-row-gap</code> mengatur jarak antar baris secara terpisah.
+    Dengan nilai <code>grid-column-gap: 10px</code> dan <code>grid-row-gap: 50px</code>,
+    jarak vertikal antar baris terlihat jauh lebih lebar dibanding jarak horizontal antar kolom.
+  </p>
+
+  <!-- ===== SKENARIO 4 ===== -->
+  <div class="label">Skenario 4 – grid-gap (shorthand)</div>
+  <div class="tempat_grid_s4">
+    <div class="item_grid">1</div>
+    <div class="item_grid">2</div>
+    <div class="item_grid">3</div>
+    <div class="item_grid">4</div>
+    <div class="item_grid">5</div>
+    <div class="item_grid">6</div>
+    <div class="item_grid">7</div>
+    <div class="item_grid">8</div>
+    <div class="item_grid">9</div>
+  </div>
+  <p class="kesimpulan">
+    Kesimpulan skenario 4 adalah: Properti <code>grid-gap</code> adalah shorthand yang menggabungkan
+    <code>grid-row-gap</code> dan <code>grid-column-gap</code> dalam satu deklarasi.
+    Dengan nilai <code>grid-gap: 50px</code>, jarak antar baris dan kolom menjadi sama rata 50px,
+    penulisan kode lebih ringkas dibanding skenario 3.
+  </p>
+
+</body>
+</html>
