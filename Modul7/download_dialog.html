@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Download Progress</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+</head>
+<body>
+
+<button id="downloadBtn">Download</button>
+
+<div id="downloadDialog" title="Download File">
+    <p>Proses download...</p>
+    <div id="progressbar"></div>
+</div>
+
+<script>
+$(function(){
+
+    $("#progressbar").progressbar({
+        value: 0
+    });
+
+    $("#downloadDialog").dialog({
+        autoOpen: false
+    });
+
+    $("#downloadBtn").click(function(){
+        $("#downloadDialog").dialog("open");
+
+        let progress = 0;
+
+        let interval = setInterval(function(){
+            progress += 10;
+            $("#progressbar").progressbar("value", progress);
+
+            if(progress >= 100){
+                clearInterval(interval);
+                alert("Download selesai!");
+            }
+        }, 500);
+    });
+
+});
+</script>
+
+</body>
+</html>

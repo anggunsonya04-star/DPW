@@ -1,0 +1,33 @@
+
+<html>
+
+<head>
+    <title>Mengakses Objek radio</title>
+</head>
+
+<body>
+    Klik pada genre film yang paling Anda sukai<br>
+    <form name="formTes">
+        <input type="radio" name="radioFilm" value="Horor" onclick="info()">Horor<br>
+        <input type="radio" name="radioFilm" value="Komedi" onclick="info()">Komedi<br>
+        <input type="radio" name="radioFilm" value="Romance" onclick="info()">Romance<br>
+        <input type="radio" name="radioFilm" value="Lainnya" onclick="info()">Lainnya<br>
+        <hr>
+        Info: <input type="text" name="fieldFilm" size="40">
+    </form>
+
+    <script language="JavaScript">
+        function info() {
+
+            for (var i = 0; i < 4; i++) {
+
+                if (document.formTes.radioFilm[i].checked) {
+
+                    document.formTes.fieldFilm.value = document.formTes.radioFilm[i].value;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
