@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Combinator Selector</title>
+  <style>
+    div p { /* no 1 - Descendant combinator: memilih semua <p> di dalam <div> */
+      color: red;
+    }
+
+    div > p { /* no 2 - Child combinator: memilih <p> yang merupakan anak langsung dari <div> */
+      background-color: yellow;
+    }
+
+    div + p { /* no 3 - Adjacent sibling combinator: memilih <p> pertama tepat setelah <div> */
+      background-color: darkgray;
+    }
+
+    div ~ p { /* no 4 - General sibling combinator: memilih semua <p> yang merupakan saudara dari <div> */
+      color: cyan;
+    }
+  </style>
+</head>
+<body>
+  <h2>Combinator Selector</h2>
+
+  <div>
+    <p>This is a paragraph. Selektor no 1 (div p): paragraf ini di dalam div, mendapat warna teks merah. Selektor no 2 (div &gt; p): paragraf ini adalah anak langsung div, mendapat background kuning.</p>
+    <p>This is a paragraph. Selektor no 1 dan no 2 juga berlaku pada paragraf ini karena masih merupakan anak langsung dari div.</p>
+  </div>
+
+  <p>This is a paragraph. Selektor no 3 (div + p): paragraf ini tepat setelah div, mendapat background darkgray. Selektor no 4 (div ~ p) juga berlaku, memberi warna teks cyan.</p>
+  <p>This is a paragraph. Selektor no 4 (div ~ p): paragraf ini adalah saudara dari div (bukan tepat setelahnya), hanya mendapat warna teks cyan dari general sibling.</p>
+</body>
+</html>

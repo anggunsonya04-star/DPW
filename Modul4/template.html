@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Template CSS</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            background-color: #f2f2f2;
+        }
+
+        /* HEADER */
+        header {
+            background: blue;
+            color: yellow;
+            padding: 20px;
+        }
+
+        header p {
+            color: white;
+            margin-top: -10px;
+        }
+
+        /* LAYOUT */
+        .container {
+            display: flex;
+            min-height: 400px;
+            background-color: white;
+        }
+
+        /* MENU KIRI */
+        .menu {
+            width: 200px;
+            border: 2px dashed #999;
+            padding: 15px;
+        }
+
+        .menu a {
+            display: block;
+            text-decoration: none;
+            color: black;
+            margin: 13px;
+        }
+
+        .menu a:hover {
+            color: blue;
+            font-weight: bold;
+        }
+
+        /* KONTEN */
+        .content {
+            flex: 1;
+            text-align: center;
+            margin-top: 40px;
+            font-size: 20px;
+        }
+
+        .content img {
+            width: 120px;
+        }
+
+        .content p {
+            color: red;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #b0c4de;
+            padding: 10px;
+            text-align: right;
+            font-size: 0.9em;
+
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>Halo CSS !</h1>
+        <p>Ini adalah website CSS saya</p>
+    </header>
+
+    <!-- ISI -->
+    <div class="container">
+
+        <!-- MENU -->
+        <div class="menu">
+            <a href="#">Menu 1</a>
+            <a href="#">Menu 2</a>
+            <a href="#">Menu 3</a>
+            <a href="#">Menu 4</a>
+            <a href="#">Menu 5</a>
+            <a href="#"><b>Menu 6</b></a>
+        </div>
+
+        <!-- KONTEN -->
+        <div class="content">
+            <div style="font-size: 50px;"><img src="logo/pnm (1).png".png"></div> 
+            <div class="logo-text"><b>TI</b></div> 
+            <div class="logo-text">Politeknik Negeri Madiun</div>
+            <p class="motto">
+                Mewujudkan pendidikan tinggi vokasi dalam bidang <br>
+                Teknologi Informasi dan penerapannya yang berkualitas, <br>
+                inovatif dan berdaya saing Nasional.
+            </p>
+        </main>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        Anggun Sonya Meylani | 253307038 | TI-2B
+    </footer>
+
+</body>
+</html>

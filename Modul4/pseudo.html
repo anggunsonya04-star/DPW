@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pseudo-class Selector</title>
+  <style>
+    p {
+      display: none;
+      background-color: darkgray;
+      padding: 20px;
+    }
+
+    div:hover p { /* :hover adalah CSS Pseudo Class */
+      display: block;
+    }
+
+    /* Pseudo-class pada link */
+    a:link {
+      color: blue;
+      text-decoration: none;
+    }
+
+    a:visited {
+      color: purple;
+    }
+
+    a:hover {
+      color: red;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    a:active {
+      color: orange;
+    }
+  </style>
+</head>
+<body>
+  <h2>Pseudo-class Selector</h2>
+
+  <h3>Contoh :hover pada div</h3>
+  <div>Letakkan kursor disini untuk melihat div elemet
+    <p>Saya adalah element p</p>
+  </div>
+
+  <br>
+  <h3>Contoh Pseudo-class pada Link</h3>
+  <p style="display:block; background:none; color:black; padding:0;">
+    Arahkan mouse ke link berikut untuk melihat perubahan warna:
+  </p>
+  <a href="#">Ini adalah link - arahkan mouse ke sini!</a>
+  <br><br>
+  <a href="https://www.google.com">Kunjungi Google (link akan berubah setelah diklik)</a>
+</body>
+</html>
