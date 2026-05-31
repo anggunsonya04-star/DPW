@@ -4,8 +4,8 @@ Selamat datang di repositori **Desain dan Pemrograman Web**. Repositori ini beri
 
 ## 👤 Identitas Mahasiswa
 * **Nama:** Anggun Sonya Meylani
-  **NIM:** 253307038
-  **Kelas:** 2B
+* **NIM:** 253307038
+* **Kelas:** 2B
 * **Program Studi:** Teknologi Informasi
 * **Kampus:** Politeknik Negeri Madiun
 
@@ -27,9 +27,11 @@ Berikut adalah daftar modul yang telah diselesaikan. Silakan klik pada nama modu
 | 5 | **Modul 5** | Modul Praktikum 5 - CSS Layout | [Lihat Modul](https://drive.google.com/file/d/1kOA0ZUzrkagsVKmrjCWfT-34aRgY1CNp/view?usp=drivesdk) |
 | 6 | **Modul 6** | Modul Praktikum 6 - CSS Framework | [Lihat Modul](https://drive.google.com/file/d/1Wa-awgpvsE9mkrW5vjix_OkT5Raj65ld/view) |
 | 7 | **Modul 7** | Modul Praktikum 7 - Javascript | [Lihat Modul](https://drive.google.com/file/d/1hmRq6HRrHIJaFgQ0bBE5Lc6xpGd5HXZa/view?usp=sharing) |
-| 8 | **Modul 8** | Modul Praktikum 8 | [Lihat Modul](https://github.com/anggerbinuko/dpw) |
-| 9 | **Modul 9** | Modul Praktikum 9 | [Lihat Modul](https://github.com/anggerbinuko/dpw) |
-| 10 | **Modul 10** | Modul Praktikum 10 | [Lihat Modul](https://github.com/anggerbinuko/dpw) |
+| 8 | **Modul 8** | Modul Praktikum 8 - PHP Dasar | [Lihat Modul](https://drive.google.com/open?id=1Qmh7Nevqkzv1mfo4HHihE7oX6RnMJ1T2&usp=drive_fs) |
+| 9 | **Modul 9** | Modul Praktikum 9 - PHP Lanjut | [Lihat Modul](https://drive.google.com/open?id=1j408ttjVwhBTLinnoyFBEmKr7OQBLzR3&usp=drive_fs) |
+| 10 | **Modul 10** | Modul Praktikum 10 - PHP OOP | [Lihat Modul](https://drive.google.com/open?id=1U3W4dmNV6u4Dj8splTJvUGlGLG7QzwI8&usp=drive_fs) |
+| 11 | **Modul 11** | Modul Praktikum 11 - PHP Database (CRUD) | [Lihat Modul](https://drive.google.com/file/d/1R2_wbjwLshdOpyKH0oyX8TMR_21AKZv1/view?usp=sharing) |  
+| 12 | **Modul 12** | Modul Praktikum 12 - PHP Database (OOP) | [Lihat Modul](https://drive.google.com/file/d/1p9oJ1OuGu5fQPQmQNbytKL8LSxlkrnsg/view?usp=sharing) |  
 
 ---
 
